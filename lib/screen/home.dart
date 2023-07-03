@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:login_ui/controller/todo_controller.dart';
+import 'package:login_ui/screen/add_todo_page.dart';
 
 class HomeScreen extends GetView<TodoController> {
   HomeScreen({super.key});
@@ -26,9 +27,12 @@ class HomeScreen extends GetView<TodoController> {
         elevation: 0,
         actions: [
           IconButton(
-            onPressed: signOut,
+            onPressed: () {
+              Navigator.pushReplacement(
+                  context, MaterialPageRoute(builder: (context) => AddTask()));
+            },
             icon: const Icon(
-              Icons.logout,
+              Icons.add,
               color: Color(0xFF9C89B8),
             ),
           ),

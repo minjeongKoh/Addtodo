@@ -96,8 +96,7 @@ class _SigninState extends State<Signin> {
                       width: MediaQuery.of(context).size.width * 0.8,
                       margin: EdgeInsets.only(
                           left: MediaQuery.of(context).size.width * 0.09),
-                      child: Image.asset(
-                          '/Users/nojeong-un/Downloads/Flutter/login_ui/asset/images/login.png'),
+                      child: Image.asset('asset/images/login.png'),
                     ),
                     const SizedBox(height: 24),
                     CustomFormField(
